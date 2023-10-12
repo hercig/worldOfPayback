@@ -8,23 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		4ED2D6EA2AD7DDBD0080632F /* WorldOfPAYBACKApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2D6E92AD7DDBD0080632F /* WorldOfPAYBACKApp.swift */; };
-		4ED2D6EC2AD7DDBD0080632F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2D6EB2AD7DDBD0080632F /* ContentView.swift */; };
+		4ED2D6EC2AD7DDBD0080632F /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2D6EB2AD7DDBD0080632F /* TransactionsView.swift */; };
 		4ED2D6EE2AD7DDBE0080632F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ED2D6ED2AD7DDBE0080632F /* Assets.xcassets */; };
 		4ED2D6F12AD7DDBE0080632F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ED2D6F02AD7DDBE0080632F /* Preview Assets.xcassets */; };
 		4ED2D6FB2AD7DDBE0080632F /* WorldOfPAYBACKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2D6FA2AD7DDBE0080632F /* WorldOfPAYBACKTests.swift */; };
-		4ED2D7052AD7DDBE0080632F /* WorldOfPAYBACKUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2D7042AD7DDBE0080632F /* WorldOfPAYBACKUITests.swift */; };
-		4ED2D7072AD7DDBE0080632F /* WorldOfPAYBACKUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2D7062AD7DDBE0080632F /* WorldOfPAYBACKUITestsLaunchTests.swift */; };
+		4ED2D71A2AD80E6D0080632F /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2D7192AD80E6D0080632F /* Assets.swift */; };
+		4ED2D71D2AD80E8D0080632F /* Assets+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED2D71C2AD80E8D0080632F /* Assets+Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		4ED2D6F72AD7DDBE0080632F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4ED2D6DE2AD7DDBC0080632F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4ED2D6E52AD7DDBD0080632F;
-			remoteInfo = WorldOfPAYBACK;
-		};
-		4ED2D7012AD7DDBE0080632F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4ED2D6DE2AD7DDBC0080632F /* Project object */;
 			proxyType = 1;
@@ -36,14 +29,13 @@
 /* Begin PBXFileReference section */
 		4ED2D6E62AD7DDBD0080632F /* WorldOfPAYBACK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldOfPAYBACK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ED2D6E92AD7DDBD0080632F /* WorldOfPAYBACKApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfPAYBACKApp.swift; sourceTree = "<group>"; };
-		4ED2D6EB2AD7DDBD0080632F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4ED2D6EB2AD7DDBD0080632F /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
 		4ED2D6ED2AD7DDBE0080632F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4ED2D6F02AD7DDBE0080632F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4ED2D6F62AD7DDBE0080632F /* WorldOfPAYBACKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldOfPAYBACKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ED2D6FA2AD7DDBE0080632F /* WorldOfPAYBACKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfPAYBACKTests.swift; sourceTree = "<group>"; };
-		4ED2D7002AD7DDBE0080632F /* WorldOfPAYBACKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorldOfPAYBACKUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4ED2D7042AD7DDBE0080632F /* WorldOfPAYBACKUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfPAYBACKUITests.swift; sourceTree = "<group>"; };
-		4ED2D7062AD7DDBE0080632F /* WorldOfPAYBACKUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOfPAYBACKUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4ED2D7192AD80E6D0080632F /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		4ED2D71C2AD80E8D0080632F /* Assets+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assets+Colors.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +53,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4ED2D6FD2AD7DDBE0080632F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -76,7 +61,6 @@
 			children = (
 				4ED2D6E82AD7DDBD0080632F /* WorldOfPAYBACK */,
 				4ED2D6F92AD7DDBE0080632F /* WorldOfPAYBACKTests */,
-				4ED2D7032AD7DDBE0080632F /* WorldOfPAYBACKUITests */,
 				4ED2D6E72AD7DDBD0080632F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,7 +70,6 @@
 			children = (
 				4ED2D6E62AD7DDBD0080632F /* WorldOfPAYBACK.app */,
 				4ED2D6F62AD7DDBE0080632F /* WorldOfPAYBACKTests.xctest */,
-				4ED2D7002AD7DDBE0080632F /* WorldOfPAYBACKUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,9 +77,10 @@
 		4ED2D6E82AD7DDBD0080632F /* WorldOfPAYBACK */ = {
 			isa = PBXGroup;
 			children = (
-				4ED2D6E92AD7DDBD0080632F /* WorldOfPAYBACKApp.swift */,
-				4ED2D6EB2AD7DDBD0080632F /* ContentView.swift */,
-				4ED2D6ED2AD7DDBE0080632F /* Assets.xcassets */,
+				4ED2D7162AD7DE960080632F /* App */,
+				4ED2D7152AD7DE850080632F /* Common */,
+				4ED2D7142AD7DE230080632F /* Modules */,
+				4ED2D7132AD7DE160080632F /* Resources */,
 				4ED2D6EF2AD7DDBE0080632F /* Preview Content */,
 			);
 			path = WorldOfPAYBACK;
@@ -118,13 +102,53 @@
 			path = WorldOfPAYBACKTests;
 			sourceTree = "<group>";
 		};
-		4ED2D7032AD7DDBE0080632F /* WorldOfPAYBACKUITests */ = {
+		4ED2D7132AD7DE160080632F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4ED2D7042AD7DDBE0080632F /* WorldOfPAYBACKUITests.swift */,
-				4ED2D7062AD7DDBE0080632F /* WorldOfPAYBACKUITestsLaunchTests.swift */,
+				4ED2D7182AD80E610080632F /* Assets */,
 			);
-			path = WorldOfPAYBACKUITests;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4ED2D7142AD7DE230080632F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				4ED2D7172AD7DEC20080632F /* Transactions */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		4ED2D7152AD7DE850080632F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		4ED2D7162AD7DE960080632F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4ED2D6E92AD7DDBD0080632F /* WorldOfPAYBACKApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		4ED2D7172AD7DEC20080632F /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				4ED2D6EB2AD7DDBD0080632F /* TransactionsView.swift */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		4ED2D7182AD80E610080632F /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				4ED2D6ED2AD7DDBE0080632F /* Assets.xcassets */,
+				4ED2D7192AD80E6D0080632F /* Assets.swift */,
+				4ED2D71C2AD80E8D0080632F /* Assets+Colors.swift */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +189,6 @@
 			productReference = 4ED2D6F62AD7DDBE0080632F /* WorldOfPAYBACKTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4ED2D6FF2AD7DDBE0080632F /* WorldOfPAYBACKUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4ED2D7102AD7DDBE0080632F /* Build configuration list for PBXNativeTarget "WorldOfPAYBACKUITests" */;
-			buildPhases = (
-				4ED2D6FC2AD7DDBE0080632F /* Sources */,
-				4ED2D6FD2AD7DDBE0080632F /* Frameworks */,
-				4ED2D6FE2AD7DDBE0080632F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4ED2D7022AD7DDBE0080632F /* PBXTargetDependency */,
-			);
-			name = WorldOfPAYBACKUITests;
-			productName = WorldOfPAYBACKUITests;
-			productReference = 4ED2D7002AD7DDBE0080632F /* WorldOfPAYBACKUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +203,6 @@
 						CreatedOnToolsVersion = 14.3;
 					};
 					4ED2D6F52AD7DDBE0080632F = {
-						CreatedOnToolsVersion = 14.3;
-						TestTargetID = 4ED2D6E52AD7DDBD0080632F;
-					};
-					4ED2D6FF2AD7DDBE0080632F = {
 						CreatedOnToolsVersion = 14.3;
 						TestTargetID = 4ED2D6E52AD7DDBD0080632F;
 					};
@@ -221,7 +223,6 @@
 			targets = (
 				4ED2D6E52AD7DDBD0080632F /* WorldOfPAYBACK */,
 				4ED2D6F52AD7DDBE0080632F /* WorldOfPAYBACKTests */,
-				4ED2D6FF2AD7DDBE0080632F /* WorldOfPAYBACKUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -243,13 +244,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4ED2D6FE2AD7DDBE0080632F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -257,8 +251,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ED2D6EC2AD7DDBD0080632F /* ContentView.swift in Sources */,
+				4ED2D6EC2AD7DDBD0080632F /* TransactionsView.swift in Sources */,
 				4ED2D6EA2AD7DDBD0080632F /* WorldOfPAYBACKApp.swift in Sources */,
+				4ED2D71D2AD80E8D0080632F /* Assets+Colors.swift in Sources */,
+				4ED2D71A2AD80E6D0080632F /* Assets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,15 +266,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4ED2D6FC2AD7DDBE0080632F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4ED2D7072AD7DDBE0080632F /* WorldOfPAYBACKUITestsLaunchTests.swift in Sources */,
-				4ED2D7052AD7DDBE0080632F /* WorldOfPAYBACKUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -286,11 +273,6 @@
 			isa = PBXTargetDependency;
 			target = 4ED2D6E52AD7DDBD0080632F /* WorldOfPAYBACK */;
 			targetProxy = 4ED2D6F72AD7DDBE0080632F /* PBXContainerItemProxy */;
-		};
-		4ED2D7022AD7DDBE0080632F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4ED2D6E52AD7DDBD0080632F /* WorldOfPAYBACK */;
-			targetProxy = 4ED2D7012AD7DDBE0080632F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -345,7 +327,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -399,7 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -420,11 +402,13 @@
 				DEVELOPMENT_TEAM = WYJK63HTNL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "World of Payback";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -432,9 +416,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tech.mundus.filip.WorldOfPAYBACK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -449,11 +436,13 @@
 				DEVELOPMENT_TEAM = WYJK63HTNL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "World of Payback";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,9 +450,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tech.mundus.filip.WorldOfPAYBACK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -476,13 +468,16 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WYJK63HTNL;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tech.mundus.filip.WorldOfPAYBACKTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorldOfPAYBACK.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WorldOfPAYBACK";
 			};
 			name = Debug;
@@ -496,50 +491,17 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = WYJK63HTNL;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tech.mundus.filip.WorldOfPAYBACKTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorldOfPAYBACK.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WorldOfPAYBACK";
-			};
-			name = Release;
-		};
-		4ED2D7112AD7DDBE0080632F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WYJK63HTNL;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tech.mundus.filip.WorldOfPAYBACKUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WorldOfPAYBACK;
-			};
-			name = Debug;
-		};
-		4ED2D7122AD7DDBE0080632F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WYJK63HTNL;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = tech.mundus.filip.WorldOfPAYBACKUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WorldOfPAYBACK;
 			};
 			name = Release;
 		};
@@ -569,15 +531,6 @@
 			buildConfigurations = (
 				4ED2D70E2AD7DDBE0080632F /* Debug */,
 				4ED2D70F2AD7DDBE0080632F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4ED2D7102AD7DDBE0080632F /* Build configuration list for PBXNativeTarget "WorldOfPAYBACKUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4ED2D7112AD7DDBE0080632F /* Debug */,
-				4ED2D7122AD7DDBE0080632F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

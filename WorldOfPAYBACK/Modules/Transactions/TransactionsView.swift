@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  TransactionsView.swift
 //  WorldOfPAYBACK
 //
 //  Created by Filip Hercig on 12.10.23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct TransactionsView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -19,8 +19,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct TransactionsView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        TransactionsView()
     }
 }
