@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct WorldOfPAYBACKApp: App {
+
+    @StateObject private var networkMonitor = NetworkMonitor()
+    
     var body: some Scene {
         WindowGroup {
-            TransactionsView()
+            TransactionsView(viewModel: .init())
+                .sheet(isPresented: !$networkMonitor.isConnected) {
+                    Text("W") // TODO: Replace with no internet connection screen
+                        .interactiveDismissDisabled()
+                }
         }
     }
 }
