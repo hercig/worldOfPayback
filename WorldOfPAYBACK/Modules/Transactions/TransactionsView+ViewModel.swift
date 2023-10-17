@@ -33,10 +33,7 @@ extension TransactionsView {
         @MainActor
         private func loadTransactions() async {
             do {
-                guard let transactionsModel = try await transactionsManager.getTransactions(sorted: true) else {
-                    return
-                }
-                transactions = transactionsModel.items
+                transactions = try await transactionsManager.getTransactions(sorted: true)
                 loadingState = transactions.isEmpty ? .empty : .success
             } catch {
                 loadingState = .failed(error.localizedDescription)

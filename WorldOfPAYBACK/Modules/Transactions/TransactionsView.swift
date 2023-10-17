@@ -64,6 +64,7 @@ private extension TransactionsView {
                 VStack(alignment: .leading) {
                     Text("TRANSACTIONS")
                         .font(.title2)
+                        .fontWeight(.bold)
                         .foregroundStyle(.white)
 
                     totalPointsView
@@ -103,6 +104,7 @@ private extension TransactionsView {
                     .font(.callout)
                 Text("\(viewModel.transactionsSum) PBP")
                     .font(.largeTitle)
+                    .fontWeight(.bold)
                     .foregroundStyle(Assets.Colors.primary.swiftUIColor)
             }
 

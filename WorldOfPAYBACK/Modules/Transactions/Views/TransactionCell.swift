@@ -13,12 +13,27 @@ struct TransactionCell: View {
 
     var body: some View {
 
-        VStack(alignment: .leading) {
-            HStack { Spacer() }
-            Text(transactionModel.partnerDisplayName)
-            Text(transactionModel.transactionDetail.bookingDate)
-            Text(transactionModel.transactionDetail.description ?? "")
-            Text("\(transactionModel.transactionDetail.value.amount) \(transactionModel.transactionDetail.value.currency)")
+        VStack {
+            HStack {
+                VStack(alignment: .leading) {
+                    Text(transactionModel.partnerDisplayName)
+                        .font(.title3)
+                    Text(transactionModel.transactionDetail.date!.formatted(.formattedDate))
+                        .foregroundStyle(.gray)
+                        .font(.caption)
+                    Text(transactionModel.transactionDetail.description ?? "")
+                }
+
+                Spacer()
+
+                VStack(alignment: .trailing) {
+                    Text("\(transactionModel.transactionDetail.value.amount)")
+                        .font(.title)
+                        .foregroundStyle(Assets.Colors.primary.swiftUIColor)
+                        .fontWeight(.bold)
+                    Text(transactionModel.transactionDetail.value.currency)
+                }
+            }
         }
         .padding()
         .background(.white)

@@ -28,6 +28,10 @@ extension TransactionsModel {
         let description: String?
         let bookingDate: String
         let value: Value
+
+        var date: Date? {
+            try? Date(bookingDate, strategy: .apiDate)
+        }
     }
     
     struct Value: Codable {
