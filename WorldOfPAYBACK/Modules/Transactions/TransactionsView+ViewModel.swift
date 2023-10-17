@@ -16,6 +16,12 @@ extension TransactionsView {
 
         private let transactionsManager: TransactionsManagerProtocol
 
+        var transactionsSum: Int {
+            transactions.reduce(0) { partialResult, transaction in
+                partialResult + transaction.transactionDetail.value.amount
+            }
+        }
+
         init(transactionsManager: TransactionsManagerProtocol = TransactionsManager()) {
             self.transactionsManager = transactionsManager
 
@@ -27,7 +33,7 @@ extension TransactionsView {
         @MainActor
         private func loadTransactions() async {
             do {
-                guard let transactionsModel = try await transactionsManager.getTransactions() else {
+                guard let transactionsModel = try await transactionsManager.getTransactions(sorted: true) else {
                     return
                 }
                 transactions = transactionsModel.items
@@ -35,6 +41,11 @@ extension TransactionsView {
             } catch {
                 loadingState = .failed(error.localizedDescription)
             }
+        }
+
+        func handleTryAgainButtonTap() {
+            loadingState = .loading
+            Task { await loadTransactions() }
         }
     }
 }

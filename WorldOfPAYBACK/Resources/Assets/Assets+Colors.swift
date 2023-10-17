@@ -9,14 +9,14 @@ import SwiftUI
 
 extension Assets {
 
-    enum Colors {
+    enum Colors: String {
 
         case primary
         case secondary
         case background
 
         var swiftUIColor: Color {
-            .blue
+            Color(self.rawValue)
         }
     }
 }
