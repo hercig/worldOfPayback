@@ -96,6 +96,9 @@ private extension TransactionsView {
         .listStyle(.plain)
         .padding(.top, 150)
         .scrollIndicators(.hidden)
+        .refreshable {
+            viewModel.handlePullToRefresh()
+        }
     }
 
     var totalPointsView: some View {

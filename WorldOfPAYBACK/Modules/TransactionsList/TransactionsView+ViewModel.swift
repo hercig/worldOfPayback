@@ -61,5 +61,9 @@ extension TransactionsView {
             loadingState = .loading
             Task { await loadTransactions() }
         }
+
+        func handlePullToRefresh() {
+            handleTryAgainButtonTap()
+        }
     }
 }
