@@ -94,11 +94,12 @@ private extension TransactionsView {
             }
         }
         .listStyle(.plain)
-        .padding(.top, 150)
+        .padding(.top, 160)
         .scrollIndicators(.hidden)
         .refreshable {
-            viewModel.handlePullToRefresh()
+            await viewModel.loadTransactions()
         }
+
     }
 
     var totalPointsView: some View {

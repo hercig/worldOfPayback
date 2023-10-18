@@ -45,7 +45,7 @@ extension TransactionsView {
         // MARK: Private methods
 
         @MainActor
-        private func loadTransactions() async {
+        func loadTransactions() async {
             do {
                 transactions = try await transactionsManager.getTransactions(sorted: true)
                 categoryFilters = transactionsManager.getTransactionsFilters()
@@ -60,10 +60,6 @@ extension TransactionsView {
         func handleTryAgainButtonTap() {
             loadingState = .loading
             Task { await loadTransactions() }
-        }
-
-        func handlePullToRefresh() {
-            handleTryAgainButtonTap()
         }
     }
 }
