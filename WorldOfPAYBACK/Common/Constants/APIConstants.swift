@@ -20,9 +20,9 @@ extension Constants {
         static var baseUrl: String {
             switch BuildConfiguration.current {
             case .debug:
-                return "https://api-test.payback.com/transactions"
+                return "https://api-test.payback.com/"
             case .release:
-                return "https://api.payback.com/transactions"
+                return "https://api.payback.com/"
             }
         }
     }

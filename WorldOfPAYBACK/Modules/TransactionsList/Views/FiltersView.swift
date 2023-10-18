@@ -56,6 +56,7 @@ extension FiltersView {
                 Toggle("Category \(category.categoryNumber)", isOn: $category.isActive)
                     .listRowSeparator(.hidden)
                     .listRowBackground(Color.clear)
+                    .tint(Assets.Colors.primary.swiftUIColor)
             }
             disclaimerView
                 .listRowSeparator(.hidden)

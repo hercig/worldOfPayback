@@ -24,7 +24,9 @@ struct TransactionsView: View {
                 .frame(height: 400)
 
         case .success:
-            contentView
+            NavigationStack {
+                contentView
+            }
 
         case .failed(let error):
             VStack {
@@ -90,13 +92,13 @@ private extension TransactionsView {
                 .listRowBackground(Color.clear)
 
             ForEach(viewModel.transactions, id: \.alias.reference) { transaction in
-                Button {
-                    viewModel.handleTransactionTap(transaction)
-                } label: {
-                    TransactionCell(transactionModel: transaction)
-                }
-                .listRowSeparator(.hidden)
-                .listRowBackground(Color.clear)
+                TransactionCell(transactionModel: transaction)
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(Color.clear)
+                    .background(
+                        NavigationLink("", destination: TransactionDetailsView(transaction: transaction))
+                            .opacity(0)
+                    )
             }
         }
         .listStyle(.plain)
