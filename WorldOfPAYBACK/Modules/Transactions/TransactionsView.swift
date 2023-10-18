@@ -20,9 +20,12 @@ struct TransactionsView: View {
 
         switch viewModel.loadingState {
         case .loading:
-            ProgressView()
+            LottieView(name: "loading", loopMode: .loop)
+                .frame(height: 400)
+
         case .success:
             contentView
+
         case .failed(let error):
             VStack {
                 LottieView(name: "somethingWentWrong", loopMode: .loop)
@@ -72,28 +75,32 @@ private extension TransactionsView {
                 .offset(y: 20)
                 .padding()
             }
-
-            Spacer()
         }
         .background(Assets.Colors.background.swiftUIColor)
+        .sheet(isPresented: $viewModel.isFiltersViewPresented) {
+            FiltersView(categoryFilters: $viewModel.categoryFilters)
+        }
     }
 
     var transactionsListView: some View {
         List {
             Rectangle()
-                .fill(.clear)
+                .fill(Color.clear)
                 .frame(height: 30)
                 .listRowBackground(Color.clear)
 
             ForEach(viewModel.transactions, id: \.alias.reference) { transaction in
-                TransactionCell(transactionModel: transaction)
-                    .listRowSeparator(.hidden)
-                    .listRowBackground(Color.clear)
+                Button {
+                    viewModel.handleTransactionTap(transaction)
+                } label: {
+                    TransactionCell(transactionModel: transaction)
+                }
+                .listRowSeparator(.hidden)
+                .listRowBackground(Color.clear)
             }
-
         }
         .listStyle(.plain)
-        .offset(y: 150)
+        .padding(.top, 150)
         .scrollIndicators(.hidden)
     }
 
@@ -120,7 +127,7 @@ private extension TransactionsView {
 
     var filterButton: some View {
         Button {
-            print("Filters")
+            viewModel.isFiltersViewPresented.toggle()
         } label: {
             ZStack {
                 Rectangle()

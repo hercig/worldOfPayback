@@ -9,7 +9,8 @@ import Foundation
 
 protocol TransactionsManagerProtocol {
     func getTransactions(sorted: Bool) async throws -> [TransactionsModel.Transaction]
-    func getTransactionsFilters() -> [TransactionFilter]
+    func getTransactionsFilters() -> [CategoryFilter]
+    func getFilteredTransactions(with filter: [CategoryFilter]) -> [TransactionsModel.Transaction]
 }
 
 final class TransactionsManager: TransactionsManagerProtocol {
@@ -17,6 +18,7 @@ final class TransactionsManager: TransactionsManagerProtocol {
     private var transactions: [TransactionsModel.Transaction] = []
 
     func getTransactions(sorted: Bool) async throws -> [TransactionsModel.Transaction] {
+
         let response = try ResponseHelper.shared.loadJson(of: TransactionsModel.self, filename: "PBTransactions")
         transactions = response.items
 
@@ -38,7 +40,14 @@ final class TransactionsManager: TransactionsManagerProtocol {
         return transactions
     }
 
-    func getTransactionsFilters() -> [TransactionFilter] {
-        return []
+    func getTransactionsFilters() -> [CategoryFilter] {
+        Array(Set(transactions.map { .init(categoryNumber: $0.category) })).sorted {
+            $0.categoryNumber < $1.categoryNumber
+        }
+    }
+
+    func getFilteredTransactions(with filter: [CategoryFilter]) -> [TransactionsModel.Transaction] {
+        let categories = filter.compactMap { $0.isActive ? $0.categoryNumber : nil }
+        return categories.isEmpty ? transactions : transactions.filter { categories.contains($0.category) }
     }
 }

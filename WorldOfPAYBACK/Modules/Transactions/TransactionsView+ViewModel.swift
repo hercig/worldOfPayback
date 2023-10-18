@@ -13,6 +13,12 @@ extension TransactionsView {
 
         @Published var transactions: [TransactionsModel.Transaction] = []
         @Published var loadingState: LoadingState = .loading
+        @Published var isFiltersViewPresented: Bool = false
+        @Published var categoryFilters: [CategoryFilter] = [] {
+            didSet {
+                transactions = transactionsManager.getFilteredTransactions(with: categoryFilters)
+            }
+        }
 
         private let transactionsManager: TransactionsManagerProtocol
 
@@ -22,6 +28,8 @@ extension TransactionsView {
             }
         }
 
+        // MARK: Init
+
         init(transactionsManager: TransactionsManagerProtocol = TransactionsManager()) {
             self.transactionsManager = transactionsManager
 
@@ -30,19 +38,28 @@ extension TransactionsView {
             }
         }
 
+        // MARK: Private methods
+
         @MainActor
         private func loadTransactions() async {
             do {
                 transactions = try await transactionsManager.getTransactions(sorted: true)
+                categoryFilters = transactionsManager.getTransactionsFilters()
                 loadingState = transactions.isEmpty ? .empty : .success
             } catch {
                 loadingState = .failed(error.localizedDescription)
             }
         }
 
+        // MARK: Public methods
+
         func handleTryAgainButtonTap() {
             loadingState = .loading
             Task { await loadTransactions() }
+        }
+
+        func handleTransactionTap(_ transaction: TransactionsModel.Transaction) {
+            print("transaction")
         }
     }
 }

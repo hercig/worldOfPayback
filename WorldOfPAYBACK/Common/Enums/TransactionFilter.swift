@@ -5,9 +5,14 @@
 //  Created by Filip Hercig on 17.10.23.
 //
 
-import Foundation
+import SwiftUI
 
-enum TransactionFilter {
+struct CategoryFilter: Identifiable, Hashable {
 
-    case category
+    let categoryNumber: Int
+    var isActive: Bool = false
+
+    var id: Int {
+        categoryNumber
+    }
 }
