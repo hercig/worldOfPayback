@@ -27,7 +27,7 @@ final class DummyData {
             transactionDetail: .init(
                 description: "Description of Rewe",
                 bookingDate: "2022-07-21T10:59:05+0200",
-                value: .init(amount: 1092, currency: "PBP")
+                value: .init(amount: 10, currency: "PBP")
             )
         ),
         .init(
@@ -47,7 +47,7 @@ final class DummyData {
             transactionDetail: .init(
                 description: "Test test",
                 bookingDate: "2022-07-22T10:59:05+0200",
-                value: .init(amount: 888, currency: "PBP")
+                value: .init(amount: 77, currency: "PBP")
             )
         ),
         .init(

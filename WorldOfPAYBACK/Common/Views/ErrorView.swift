@@ -29,7 +29,7 @@ struct ErrorView: View {
             }
 
             if let tryAgainHandler {
-                Button("Try again") {
+                Button(Assets.Localizable.tryAgain.localized) {
                     tryAgainHandler()
                 }
                 .buttonStyle(.bordered)

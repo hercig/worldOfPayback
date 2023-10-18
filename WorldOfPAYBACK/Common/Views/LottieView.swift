@@ -15,7 +15,6 @@ struct LottieView: UIViewRepresentable {
 
     func makeUIView(context: Context) -> UIView {
         let view = UIView(frame: .zero)
-
         let lottieAnimationView = LottieAnimationView(name: name)
 
         lottieAnimationView.contentMode = .scaleAspectFit
@@ -26,8 +25,8 @@ struct LottieView: UIViewRepresentable {
         view.addSubview(lottieAnimationView)
 
         NSLayoutConstraint.activate([
-          lottieAnimationView.widthAnchor.constraint(equalTo: view.widthAnchor),
-          lottieAnimationView.heightAnchor.constraint(equalTo: view.heightAnchor)
+            lottieAnimationView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            lottieAnimationView.heightAnchor.constraint(equalTo: view.heightAnchor)
         ])
 
         return view

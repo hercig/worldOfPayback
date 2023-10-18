@@ -7,3 +7,11 @@
 */
 
 "transactions" = "Transactions";
+"tryAgain" = "Try again";
+"noInternetError" = "No internet connection!\n Please reconnect.";
+"totalSum" = "Total:";
+"noTransactionsError" = "No transactions!";
+"filtersTitle" = "Filters";
+"filtersHintMessage" = "Select categories which you would like to filter";
+"filtersWarningMessage" = "If no category is selected, all categories will be shown.";
+"category %lld" = "Category %lld";

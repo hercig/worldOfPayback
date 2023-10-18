@@ -17,7 +17,7 @@ struct InternetErrorView: View {
             LottieView(name: Assets.Animations.noInternet.rawValue, loopMode: .loop)
                 .frame(height: 250)
 
-            Text("No internet connection!\n Please reconnect.")
+            Text(Assets.Localizable.noInternetError.localized)
                 .font(.title2)
                 .multilineTextAlignment(.center)
                 .padding(.top, 25)

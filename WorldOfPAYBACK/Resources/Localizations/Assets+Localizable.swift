@@ -5,12 +5,22 @@
 //  Created by Filip Hercig on 18.10.23.
 //
 
-import Foundation
+import SwiftUI
 
 extension Assets {
 
     enum Localizable: String {
+        case transactions
+        case tryAgain
+        case noInternetError
+        case totalSum
+        case noTransactionsError
+        case filtersTitle
+        case filtersHintMessage
+        case filtersWarningMessage
 
-        case transactions = "transactions"
+        var localized: LocalizedStringKey {
+            LocalizedStringKey(self.rawValue)
+        }
     }
 }

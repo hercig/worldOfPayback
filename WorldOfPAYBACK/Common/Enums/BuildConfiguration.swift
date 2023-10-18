@@ -8,7 +8,6 @@
 import Foundation
 
 enum BuildConfiguration: CaseIterable {
-
     case debug
     case release
 }

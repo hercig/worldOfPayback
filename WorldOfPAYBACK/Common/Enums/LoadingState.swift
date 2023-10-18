@@ -8,7 +8,6 @@
 import Foundation
 
 enum LoadingState {
-
     case empty
     case loading
     case success

@@ -12,8 +12,8 @@ extension FormatStyle where Self == Date.FormatStyle {
     static var formattedDate: Date.FormatStyle {
         .init()
             .day(.twoDigits)
-            .month(.abbreviated)
-            .year()
+            .month(.twoDigits)
+            .year(.defaultDigits)
             .locale(.current)
     }
 }

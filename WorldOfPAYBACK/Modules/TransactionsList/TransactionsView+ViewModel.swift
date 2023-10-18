@@ -11,6 +11,10 @@ extension TransactionsView {
 
     final class ViewModel: ObservableObject {
 
+        private let transactionsManager: TransactionsManagerProtocol
+
+        // MARK: Published Properties
+
         @Published var transactions: [TransactionsModel.Transaction] = []
         @Published var loadingState: LoadingState = .loading
         @Published var isFiltersViewPresented: Bool = false
@@ -20,7 +24,7 @@ extension TransactionsView {
             }
         }
 
-        private let transactionsManager: TransactionsManagerProtocol
+        // MARK: Computed Properties
 
         var transactionsSum: Int {
             transactions.reduce(0) { partialResult, transaction in
@@ -56,10 +60,6 @@ extension TransactionsView {
         func handleTryAgainButtonTap() {
             loadingState = .loading
             Task { await loadTransactions() }
-        }
-
-        func handleTransactionTap(_ transaction: TransactionsModel.Transaction) {
-            print("transaction")
         }
     }
 }

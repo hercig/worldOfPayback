@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TransactionDetailsView: View {
 
-    // MARK: Init properties
+    // MARK: Init Properties
 
     let transaction: TransactionsModel.Transaction
 

@@ -10,9 +10,11 @@ import XCTest
 
 final class TransactionsManagerTest: XCTestCase {
 
-    var sut: TransactionsManagerProtocol!
+    private var sut: TransactionsManagerProtocol!
 
     override func setUp() {
+        super.setUp()
+        
         sut = TransactionsManager()
         sut.transactions = DummyData.transactionModels
     }

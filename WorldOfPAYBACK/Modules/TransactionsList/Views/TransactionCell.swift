@@ -9,10 +9,13 @@ import SwiftUI
 
 struct TransactionCell: View {
 
+    // MARK: Init Properties
+
     let transactionModel: TransactionsModel.Transaction
 
-    var body: some View {
+    // MARK: View
 
+    var body: some View {
         VStack {
             HStack {
                 VStack(alignment: .leading) {
@@ -40,6 +43,8 @@ struct TransactionCell: View {
         .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 }
+
+// MARK: - Preview
 
 struct TransactionCell_Previews: PreviewProvider {
     static var previews: some View {

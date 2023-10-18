@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FiltersView: View {
 
-    // MARK: Init properties
+    // MARK: Init Properties
 
     @Binding var categoryFilters: [CategoryFilter]
 
@@ -40,10 +40,10 @@ extension FiltersView {
                 .ignoresSafeArea()
 
             VStack(alignment: .leading) {
-                Text("Filters")
+                Text(Assets.Localizable.filtersTitle.localized)
                     .font(.title)
                     .fontWeight(.heavy)
-                Text("Select categories which you would like to filter")
+                Text(Assets.Localizable.filtersHintMessage.localized)
             }
             .foregroundStyle(.white)
             .padding()
@@ -53,7 +53,7 @@ extension FiltersView {
     var listView: some View {
         List {
             ForEach($categoryFilters, id: \.id) { $category in
-                Toggle("Category \(category.categoryNumber)", isOn: $category.isActive)
+                Toggle("category \(category.categoryNumber)", isOn: $category.isActive)
                     .listRowSeparator(.hidden)
                     .listRowBackground(Color.clear)
                     .tint(Assets.Colors.primary.swiftUIColor)
@@ -68,7 +68,7 @@ extension FiltersView {
     var disclaimerView: some View {
         HStack {
             Spacer()
-            Text("If no category is selected, all categories will be shown.")
+            Text(Assets.Localizable.filtersWarningMessage.localized)
                 .font(.caption)
                 .fontWeight(.light)
                 .multilineTextAlignment(.center)

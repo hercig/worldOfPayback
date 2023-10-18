@@ -10,7 +10,7 @@ import Lottie
 
 struct TransactionsView: View {
 
-    // MARK: ViewModel
+    // MARK: Init Properties
 
     @StateObject var viewModel: ViewModel
 
@@ -34,7 +34,7 @@ struct TransactionsView: View {
             }
 
         case .empty:
-            Text("No transactions!")
+            Text(Assets.Localizable.noTransactionsError.localized)
         }
     }
 }
@@ -45,31 +45,34 @@ private extension TransactionsView {
 
     var contentView: some View {
         VStack {
-            ZStack(alignment: .top) {
-
-                transactionsListView
-
-                Rectangle()
-                    .fill(Assets.Colors.primary.swiftUIColor)
-                    .frame(height: 180)
-                    .ignoresSafeArea()
-
-                VStack(alignment: .leading) {
-                    Text(LocalizedStringKey(Assets.Localizable.transactions.rawValue))
-                        .textCase(.uppercase)
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .foregroundStyle(.white)
-
-                    totalPointsView
-                }
-                .offset(y: 20)
-                .padding()
-            }
+            headerView
         }
         .background(Assets.Colors.background.swiftUIColor)
         .sheet(isPresented: $viewModel.isFiltersViewPresented) {
             FiltersView(categoryFilters: $viewModel.categoryFilters)
+        }
+    }
+
+    var headerView: some View {
+        ZStack(alignment: .top) {
+            transactionsListView
+
+            Rectangle()
+                .fill(Assets.Colors.primary.swiftUIColor)
+                .frame(height: 180)
+                .ignoresSafeArea()
+
+            VStack(alignment: .leading) {
+                Text(Assets.Localizable.transactions.localized)
+                    .textCase(.uppercase)
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .foregroundStyle(.white)
+
+                totalPointsView
+            }
+            .offset(y: 20)
+            .padding()
         }
     }
 
@@ -98,7 +101,7 @@ private extension TransactionsView {
     var totalPointsView: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text("Total")
+                Text(Assets.Localizable.totalSum.localized)
                     .font(.callout)
                 Text("\(viewModel.transactionsSum) PBP")
                     .font(.largeTitle)
