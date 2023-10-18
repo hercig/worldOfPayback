@@ -20,7 +20,7 @@ struct TransactionsView: View {
 
         switch viewModel.loadingState {
         case .loading:
-            LottieView(name: "loading", loopMode: .loop)
+            LottieView(name: Assets.Animations.loading.rawValue, loopMode: .loop)
                 .frame(height: 400)
 
         case .success:
@@ -29,24 +29,12 @@ struct TransactionsView: View {
             }
 
         case .failed(let error):
-            VStack {
-                LottieView(name: "somethingWentWrong", loopMode: .loop)
-                    .frame(height: 400)
-                    .padding()
-
-                Text("Error: \(error)")
-                    .multilineTextAlignment(.center)
-
-
-                Button("Try again") {
-                    viewModel.handleTryAgainButtonTap()
-                }
-                .buttonStyle(.bordered)
-                .foregroundStyle(Assets.Colors.primary.swiftUIColor)
+            ErrorView(errorMessage: error) {
+                viewModel.handleTryAgainButtonTap()
             }
 
         case .empty:
-            Text("No transactions")
+            Text("No transactions!")
         }
     }
 }
@@ -67,7 +55,8 @@ private extension TransactionsView {
                     .ignoresSafeArea()
 
                 VStack(alignment: .leading) {
-                    Text("TRANSACTIONS")
+                    Text(LocalizedStringKey(Assets.Localizable.transactions.rawValue))
+                        .textCase(.uppercase)
                         .font(.title2)
                         .fontWeight(.bold)
                         .foregroundStyle(.white)

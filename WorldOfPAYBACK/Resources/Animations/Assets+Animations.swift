@@ -11,6 +11,8 @@ extension Assets {
 
     enum Animations: String {
 
-        case somethingWentWrong
+        case somethingWentWrong = "something_went_wrong_animation"
+        case loading
+        case noInternet = "no_internet_animation"
     }
 }

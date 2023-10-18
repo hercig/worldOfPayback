@@ -16,7 +16,7 @@ struct WorldOfPAYBACKApp: App {
         WindowGroup {
             TransactionsView(viewModel: .init())
                 .sheet(isPresented: !$networkMonitor.isConnected) {
-                    Text("W") // TODO: Replace with no internet connection screen
+                    InternetErrorView()
                         .interactiveDismissDisabled()
                 }
         }

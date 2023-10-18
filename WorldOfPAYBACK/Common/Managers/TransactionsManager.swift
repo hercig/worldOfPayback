@@ -8,6 +8,7 @@
 import Foundation
 
 protocol TransactionsManagerProtocol {
+    var transactions: [TransactionsModel.Transaction] { get set }
     func getTransactions(sorted: Bool) async throws -> [TransactionsModel.Transaction]
     func getTransactionsFilters() -> [CategoryFilter]
     func getFilteredTransactions(with filter: [CategoryFilter]) -> [TransactionsModel.Transaction]
@@ -15,7 +16,7 @@ protocol TransactionsManagerProtocol {
 
 final class TransactionsManager: TransactionsManagerProtocol {
 
-    private var transactions: [TransactionsModel.Transaction] = []
+    var transactions: [TransactionsModel.Transaction] = []
 
     func getTransactions(sorted: Bool) async throws -> [TransactionsModel.Transaction] {
 

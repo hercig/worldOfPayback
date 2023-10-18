@@ -13,11 +13,15 @@ struct TransactionsModel: Codable {
 
 extension TransactionsModel {
 
-    struct Transaction: Codable {
+    struct Transaction: Codable, Equatable {
         let partnerDisplayName: String
         let alias: AliasModel
         let category: Int
         let transactionDetail: TransactionDetail
+
+        static func == (lhs: TransactionsModel.Transaction, rhs: TransactionsModel.Transaction) -> Bool {
+            lhs.alias.reference == rhs.alias.reference
+        }
     }
     
     struct AliasModel: Codable {
